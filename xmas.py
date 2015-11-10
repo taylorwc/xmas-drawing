@@ -15,7 +15,7 @@ Taylor = {
 Hannah = {
 	"name":"spamster",
 	"index":3,
-	"exclusions":[3]
+	"exclusions":[3, 6]
 }
 
 Thomas = {
@@ -30,18 +30,24 @@ Wesley = {
 	"exclusions":[5]
 }
 
-participants = [Kristin, Taylor, Hannah, Thomas, Wesley]
-translator = {1:"krispy",2:"tater",3:"spamster",4:"comets",5:"moosely"}
-drawing = [1,2,3,4,5]
+Gavin = {
+	"name":"g-dog",
+	"index":6,
+	"exclusions":[6, 3]
+}
+
+participants = [Kristin, Taylor, Hannah, Thomas, Wesley, Gavin]
+translator = {1:"krispy",2:"tater",3:"spamster",4:"comets",5:"moosely", 6:"g-dog"}
+drawing = [1,2,3,4,5,6]
 new = []
 
 for x in drawing:
 	placeholder = random.choice(drawing)
-	
+
 	for y in participants:
 		if x == y["index"]:
 			exclusion_placeholder = y["exclusions"]
-	
+
 	while True:
 		if placeholder in new:
 			print "the value was already selected"
@@ -50,7 +56,7 @@ for x in drawing:
 		elif placeholder in exclusion_placeholder:
 			print "value was unique but listed as an exclusion"
 			placeholder = random.choice(drawing)
-		
+
 		else:
 			print "unique value generated and not in excluded list"
 			new.append(placeholder)
@@ -61,6 +67,5 @@ for z in participants:
 	result = new[counter - 1]
 	print z["name"] + " has drawn " + translator[result] + "!!"
 	counter += 1
-		 
-print str(new)
 
+print str(new)
