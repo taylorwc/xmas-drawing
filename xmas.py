@@ -31,13 +31,13 @@ Wesley = {
 }
 
 Gavin = {
-	"name":"g-dog",
+	"name":"babby",
 	"index":6,
 	"exclusions":[6, 3]
 }
 
 participants = [Kristin, Taylor, Hannah, Thomas, Wesley, Gavin]
-translator = {1:"krispy",2:"tater",3:"spamster",4:"comets",5:"moosely", 6:"g-dog"}
+translator = {1:"krispy",2:"tater",3:"spamster",4:"comets",5:"moosely", 6:"babby"}
 drawing = [1,2,3,4,5,6]
 new = []
 
