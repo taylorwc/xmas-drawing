@@ -50,22 +50,23 @@ for x in drawing:
 
 	while True:
 		if placeholder in new:
-			print "the value was already selected"
+			print("the value was already selected")
 			placeholder = random.choice(drawing)
 
 		elif placeholder in exclusion_placeholder:
-			print "value was unique but listed as an exclusion"
+			print("value was unique but listed as an exclusion")
 			placeholder = random.choice(drawing)
 
 		else:
-			print "unique value generated and not in excluded list"
+			print("unique value generated and not in excluded list")
 			new.append(placeholder)
 			break
 
 counter = 1
 for z in participants:
 	result = new[counter - 1]
-	print z["name"] + " has drawn " + translator[result] + "!!"
+	print(z["name"] + " has drawn " + translator[result] + "!!")
 	counter += 1
 
-print str(new)
+print(str(new))
+print(counter, " iterations to complete")
